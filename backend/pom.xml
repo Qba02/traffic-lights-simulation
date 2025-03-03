@@ -14,11 +14,12 @@
     <name>backend</name>
     <description>backend</description>
     <url/>
-    <licenses>
-        <license/>
-    </licenses>
     <developers>
-        <developer/>
+        <developer>
+            <name>Jakub Nowak</name>
+            <email>njakub002@gmail.com</email>
+            <url>https://github.com/Qba02</url>
+        </developer>
     </developers>
     <scm>
         <connection/>
