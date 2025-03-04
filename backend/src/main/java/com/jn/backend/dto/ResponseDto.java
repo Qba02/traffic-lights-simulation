@@ -1,11 +1,9 @@
 package com.jn.backend.dto;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class ResponseDto {
-    private List<List<String>> stepStatuses = new ArrayList<>();;
+    private final List<List<String>> stepStatuses = new LinkedList<>();
 
     public ResponseDto() {}
 
@@ -13,7 +11,8 @@ public class ResponseDto {
         if (stepResult == null) {
             throw new IllegalArgumentException("Step result cannot be null");
         }
-        this.stepStatuses.add(new ArrayList<>(stepResult));
+        System.out.println(Arrays.toString(stepStatuses.toArray()));
+        this.stepStatuses.add(stepResult);
     }
     public void clearStepStatuses() {
         this.stepStatuses.clear();

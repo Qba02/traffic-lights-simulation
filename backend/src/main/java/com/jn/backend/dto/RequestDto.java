@@ -7,8 +7,6 @@ import java.util.List;
 public class RequestDto {
     private List<Command> commands;
 
-    public RequestDto() {}
-
     public List<Command> getCommands() {
         return commands;
     }

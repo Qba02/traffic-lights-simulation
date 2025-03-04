@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/traffic-lights")
 public class Controller {
 
-    private final Service service;
+    private final TrafficService service;
 
     @Autowired
-    public Controller(Service service){
+    public Controller(TrafficService service){
         this.service = service;
     }
 

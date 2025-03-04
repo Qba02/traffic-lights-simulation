@@ -1,29 +1,38 @@
 package com.jn.backend.model;
 
-import com.jn.backend.enums.CommandType;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.jn.backend.TrafficService;
+import com.jn.backend.dto.ResponseDto;
+import com.jn.backend.enums.RoadDirection;
 
 public class AddVehicleCommand extends Command{
-    private final String vehicleId;
-    private final String startRoad;
-    private final String endRoad;
+    private DestinationVehicle vehicle;
 
+    public AddVehicleCommand(){}
 
-    public AddVehicleCommand(String vehicleId, String startRoad, String endRoad) {
-        super(CommandType.ADD_VEHICLE);
-        this.vehicleId = vehicleId;
-        this.startRoad = startRoad;
-        this.endRoad = endRoad;
+    @JsonCreator
+    public AddVehicleCommand(
+            @JsonProperty("vehicleId") String vehicleId,
+            @JsonProperty("startRoad") String startRoad,
+            @JsonProperty("endRoad") String endRoad
+    ) {
+        this.vehicle = new DestinationVehicle(
+                vehicleId,
+                RoadDirection.valueOf(startRoad.toUpperCase()),
+                RoadDirection.valueOf(endRoad.toUpperCase()));
     }
 
-    public String getVehicleId() {
-        return vehicleId;
+
+    public DestinationVehicle getVehicle() {
+        return vehicle;
+    }
+    public void setVehicle(DestinationVehicle vehicle) {
+        this.vehicle = vehicle;
     }
 
-    public String getStartRoad() {
-        return startRoad;
-    }
-
-    public String getEndRoad() {
-        return endRoad;
+    @Override
+    public void execute(TrafficService service, ResponseDto response) {
+        service.addVehicle(vehicle);
     }
 }
