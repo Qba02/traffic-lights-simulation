@@ -1,6 +1,6 @@
 async function requestSimulationResults() {
     try {
-        const response = await fetch("src/assets/input.json");
+        const response = await fetch("/inputs/input.json");
         const jsonData = await response.json();
         
         const postResponse = await fetch("http://localhost:8080/simulation", {
@@ -40,3 +40,4 @@ async function downloadJsonFile(jsonData) {
 }
 
 
+window.requestSimulationResults = requestSimulationResults;
