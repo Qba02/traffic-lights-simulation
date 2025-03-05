@@ -11,7 +11,6 @@ public class ResponseDto {
         if (stepResult == null) {
             throw new IllegalArgumentException("Step result cannot be null");
         }
-        System.out.println(Arrays.toString(stepStatuses.toArray()));
         this.stepStatuses.add(stepResult);
     }
     public void clearStepStatuses() {

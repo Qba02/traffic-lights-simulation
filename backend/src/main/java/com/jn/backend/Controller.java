@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/traffic-lights")
+@RequestMapping("/simulation")
 public class Controller {
 
     private final TrafficService service;

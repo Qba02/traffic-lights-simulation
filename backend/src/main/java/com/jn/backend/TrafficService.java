@@ -115,7 +115,6 @@ public class TrafficService {
 
     public List<String> nextTrafficStep() {
         if (isCrossEmpty()) {
-            System.out.println("Empty cross");
             return Collections.emptyList();
         } else {
             if(stepsNumberMap.get(isNS) == 0 && stepsNumberMap.get(!isNS) == 0){
@@ -131,13 +130,11 @@ public class TrafficService {
 
     public void addVehicle(DestinationVehicle vehicle) {
         vehicleQueues.get(vehicle.getStartRoad()).add(vehicle);
-        System.out.println(vehicleQueues.values());
     }
 
     public ResponseDto processSimulation(RequestDto requestData) {
         ResponseDto resultDto = new ResponseDto();
         for (Command command : requestData.getCommands()) {
-            System.out.println(command.getClass().getName());
             command.execute(this, resultDto);
         }
 

@@ -10,3 +10,4 @@ public class StepCommand extends Command {
         response.addStepResult(service.nextTrafficStep());
     }
 }
+
