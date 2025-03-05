@@ -56,7 +56,7 @@ function createVehicle(x, z, direction, rotation) {
 
 function animate() {
   requestAnimationFrame(animate);
-  const speed = 0.05;
+  const speed = 0.015;
   const loopBoundary = 7.5;
 
   vehicles.forEach((v) => {
