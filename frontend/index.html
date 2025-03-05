@@ -12,28 +12,20 @@
       <h1>Traffic Light Simulation</h1>
       <button id="animation-button">
         Start animation
-        <img
-          class="icons"
-          src="/icons/loader-icon.svg"
-          alt="Animation icon"
-        />
+        <img class="icons" src="/icons/loader-icon.svg" alt="Animation icon" />
       </button>
       <button id="download-button" onclick="requestSimulationResults()">
         Download results
-        <img
-          class="icons"
-          src="/icons/download-icon.svg"
-          alt="Download icon"
-        />
+        <img class="icons" src="/icons/download-icon.svg" alt="Download icon" />
       </button>
     </main>
     <div class="scene-3D">
-      <script src="src/scene3D/scene.js"></script>
-      <script src="src/scene3D/elements.js"></script>
-      <script src="src/scene3D/lights.js"></script>
+      <script type="module" src="src/scene3D/scene.js"></script>
+      <script type="module" src="src/scene3D/elements.js"></script>
+      <script type="module" src="src/scene3D/lights.js"></script>
       <script type="module" src="src/scene3D/main.js"></script>
       <script type="module" src="src/scene3D/controls.js"></script>
-      <script src="src/fetch.js"></script>
+      <script type="module" src="src/fetch.js"></script>
     </div>
   </body>
 </html>

@@ -1,4 +1,5 @@
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { camera, renderer, scene } from "./scene.js";
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;

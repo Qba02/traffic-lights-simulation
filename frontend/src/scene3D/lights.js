@@ -1,23 +1,31 @@
+import { scene } from "./scene.js";
+
 const HALF_PI = Math.PI / 2;
 
 function createTrafficLights(x, y, z, rotation, redLightOn) {
   const trafficLightGroup = new THREE.Group();
 
   const poleGeometry = new THREE.CylinderGeometry(0.08, 0.08, 1, 32);
-  const poleMaterial = new THREE.MeshStandardMaterial({ color: "rgb(0, 0, 0)", metalness: 0.8 });
+  const poleMaterial = new THREE.MeshStandardMaterial({
+    color: "rgb(0, 0, 0)",
+    metalness: 0.8,
+  });
   const pole = new THREE.Mesh(poleGeometry, poleMaterial);
   pole.position.set(x, y, z);
   trafficLightGroup.add(pole);
 
   const frameGeometry = new THREE.BoxGeometry(0.5, 1, 0.3);
-  const frameMaterial = new THREE.MeshStandardMaterial({ color: "rgb(0, 0, 0)", metalness: 0.8  });
+  const frameMaterial = new THREE.MeshStandardMaterial({
+    color: "rgb(0, 0, 0)",
+    metalness: 0.8,
+  });
   const frame = new THREE.Mesh(frameGeometry, frameMaterial);
   frame.position.set(x, y + 1, z);
   trafficLightGroup.add(frame);
 
-  redLight = createLight("rgb(202, 0, 0)", x, y - 0.7, z + 0.15);
-  yellowLight = createLight("rgb(205, 181, 0)", x, y - 1.0, z + 0.15);
-  greenLight = createLight("rgb(52, 183, 0)", x, y - 1.3, z + 0.15);
+  const redLight = createLight("rgb(202, 0, 0)", x, y - 0.7, z + 0.15);
+  const yellowLight = createLight("rgb(205, 181, 0)", x, y - 1.0, z + 0.15);
+  const greenLight = createLight("rgb(52, 183, 0)", x, y - 1.3, z + 0.15);
   trafficLightGroup.add(redLight);
   trafficLightGroup.add(yellowLight);
   trafficLightGroup.add(greenLight);
@@ -25,10 +33,10 @@ function createTrafficLights(x, y, z, rotation, redLightOn) {
   let pointLight;
   if (redLightOn) {
     pointLight = new THREE.PointLight("rgb(255, 0, 0)", 3, 3);
-    pointLight.position.set(x-1, y+1, z+1);
+    pointLight.position.set(x - 1, y + 1, z + 1);
   } else {
     pointLight = new THREE.PointLight("rgb(69, 235, 4)", 3, 3);
-    pointLight.position.set(x-1, y+1, z+1);
+    pointLight.position.set(x - 1, y + 1, z + 1);
   }
 
   trafficLightGroup.add(pointLight);

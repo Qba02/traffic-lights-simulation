@@ -22,3 +22,5 @@ pointLight.position.set(0, 4, 0);
 scene.add(pointLight);
 
 scene.background = new THREE.Color("rgb(32, 32, 32)");
+
+export { scene, camera, renderer };

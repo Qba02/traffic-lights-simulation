@@ -1,3 +1,5 @@
+import { scene } from "./scene.js";
+
 const textureLoader = new THREE.TextureLoader();
 const asphaltTexture = textureLoader.load("textures/cardboard-texture.jpg");
 asphaltTexture.wrapS = asphaltTexture.wrapT = THREE.RepeatWrapping;
@@ -65,7 +67,6 @@ function addConcrete(x, z, sizeX, sizeY) {
   concrete.position.x -= x;
   scene.add(concrete);
 }
-
 
 addGrass(5.5, 5.5);
 addGrass(-5.5, 5.5);

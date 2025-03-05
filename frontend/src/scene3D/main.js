@@ -1,4 +1,5 @@
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { scene } from "./scene.js";
 
 const loader = new GLTFLoader();
 let vehicleModel = null;
@@ -85,10 +86,10 @@ function animate() {
 
 loadModel("car/scene.gltf", createVehicles1);
 loadModel("car2/scene.gltf", createVehicles2);
-let eventCount = 0 
+let eventCount = 0;
 document.getElementById("animation-button").addEventListener("click", () => {
-  if(eventCount===0){
-      animate();
+  if (eventCount === 0) {
+    animate();
   }
   eventCount++;
 });
