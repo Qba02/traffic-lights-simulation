@@ -11,13 +11,14 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 document.body.appendChild(renderer.domElement);
-camera.position.set(0, 8, 11);
+camera.position.set(0, 3, 11);
 camera.lookAt(0, 0, 0);
 
-const light = new THREE.DirectionalLight(0xffffff, 1);
-light.position.set(5, 10, 5);
-scene.add(light);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+scene.add(ambientLight);
 
-// const light2 = new THREE.DirectionalLight(0xffffff, 1);
-// light.position.set(5, -10, 1);
-// scene.add(light2);
+const pointLight = new THREE.PointLight(0xffffff, 2, 80);
+pointLight.position.set(0, 4, 0);
+scene.add(pointLight);
+
+scene.background = new THREE.Color("rgb(32, 32, 32)");
