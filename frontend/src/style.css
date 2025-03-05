@@ -3,19 +3,19 @@ body {
   overflow: hidden;
   background-color: rgb(32, 32, 32);
   color: whitesmoke;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main{
+main {
   width: 70%;
   height: 20vh;
   margin: auto;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-button{
+button {
   display: flex;
   align-items: center;
   outline: 0;
@@ -29,13 +29,14 @@ button{
   font-weight: 700;
   line-height: 1;
   transition: all 0.4s;
+  box-shadow: inset;
 }
 
-button:hover{
-  transform: translateY(2px);
+button:hover {
+  transform: translateY(-3px);
 }
 
-.icons{
+.icons {
   margin-left: 10px;
   width: 24px;
   height: 24px;

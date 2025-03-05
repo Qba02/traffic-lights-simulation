@@ -85,4 +85,10 @@ function animate() {
 
 loadModel("car/scene.gltf", createVehicles1);
 loadModel("car2/scene.gltf", createVehicles2);
-animate();
+let eventCount = 0 
+document.getElementById("animation-button").addEventListener("click", () => {
+  if(eventCount===0){
+      animate();
+  }
+  eventCount++;
+});
