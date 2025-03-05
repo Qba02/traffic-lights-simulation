@@ -1,4 +1,42 @@
 body {
   margin: 0;
   overflow: hidden;
+  background-color: rgb(32, 32, 32);
+  color: whitesmoke;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+  width: 70%;
+  height: 20vh;
+  margin: auto;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+button{
+  display: flex;
+  align-items: center;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: whitesmoke;
+  color: black;
+  border-radius: 8px;
+  padding: 14px 24px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  transition: all 0.4s;
+}
+
+button:hover{
+  transform: translateY(2px);
+}
+
+.icons{
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
 }
