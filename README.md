@@ -2,7 +2,7 @@
 
 ![intersection animation gif](intersection-animation.gif)
 _Animation above illustrates the simulation described in this project.
-To view the full animation, you can run the frontend – go to this [section](##quick-start)_.
+To view the full animation, you can run the frontend – go to this [section](#quick-start)_.
 
 ## Overview
 
@@ -152,3 +152,5 @@ This project uses following graphic resources:
 3. This work is based on "Idealny zielona trawa" (https://pl.freepik.com/darmowe-zdjecie/idealny-zielona-trawa_902965.htm#from_element=detail_alsolike) by freestockcenter.
 
 4. This work is based on "Tektury tekstury" (https://pl.freepik.com/darmowe-zdjecie/tektury-tekstury_1035400.htm#fromView=keyword&page=1&position=5uuid=19cbd4f2-c25f-4ae6-b0e3-300c4f6dc4b0&query=Tekstura+Asfalt) bykues1.
+
+5. Badges are from [md-badges](https://github.com/inttter/md-badges), MIT license.
